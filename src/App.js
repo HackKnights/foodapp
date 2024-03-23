@@ -4,7 +4,6 @@ import React from 'react';
 import Soup from './components/Soup'; 
 import FriedRice from './components/FriedRice';
 import Wonton from './components/Wonton';
-import Aboutus from './components/Aboutus';
 
 const App = () => {
   return (
@@ -15,7 +14,6 @@ const App = () => {
         <Route path="/soup" element={<Soup />} />
         <Route path="/wonton" element={<Wonton />} />
         <Route path="/fried-rice" element={<FriedRice />} />
-        
       </Routes>
     </BrowserRouter>
   );
