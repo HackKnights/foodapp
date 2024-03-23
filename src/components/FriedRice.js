@@ -2,17 +2,16 @@ import React, { useState } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import { initializeApp } from 'firebase/app';
+import firebaseConfig from './firebaseConfig';
 
-const firebaseConfig = {
-    // ... your config
-};
+
 
 //const app = initializeApp(firebaseConfig);
 //const db = firebase.firestore();
 
 
 // Initialize Firebase with the configuration object
-const app = initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
 
@@ -29,8 +28,8 @@ const FriedRice = () => {
 
     const handleIngredientChange = (event) => {
         const { name, value, type, checked } = event.target;
-
-        if (type === 'select') {
+    
+        if (type === 'select' && name === 'Tofu') {
             setIngredients({
                 ...ingredients,
                 [name]: value
@@ -40,9 +39,13 @@ const FriedRice = () => {
                 ...ingredients,
                 [name]: checked ? 'Yes' : 'No'
             });
+        } else {
+            setIngredients({
+                ...ingredients,
+                [name]: value
+            });
         }
     };
-
 
 const handleFormSubmit = async () => {
     try {
