@@ -1,11 +1,11 @@
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID",
-    measurementId: "YOUR_MEASUREMENT_ID"
+  apiKey: "AIzaSyBS7VH0pNSwirl8m9-PEUsMFRnZQdx1ueE",
+  authDomain: "foodapp-ba1f3.firebaseapp.com",
+  projectId: "foodapp-ba1f3",
+  storageBucket: "foodapp-ba1f3.appspot.com",
+  messagingSenderId: "185725571580",
+  appId: "1:185725571580:web:2bd58f845466bcc4906279",
+  measurementId: "G-1DXB5NHETH"
   };
   
   export default firebaseConfig;
