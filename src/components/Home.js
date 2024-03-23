@@ -1,13 +1,24 @@
 import React, { useState } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase/compat/app'; // Updated import statement
+import 'firebase/compat/firestore'; // Updated import statement
+import { initializeApp } from 'firebase/app'; // Added import statement for initializeApp
 
-// Initialize Firebase
+// Your web app's Firebase configuration
 const firebaseConfig = {
-  // Your Firebase config here
+    apiKey: "AIzaSyBS7VH0pNSwirl8m9-PEUsMFRnZQdx1ueE",
+    authDomain: "foodapp-ba1f3.firebaseapp.com",
+    projectId: "foodapp-ba1f3",
+    storageBucket: "foodapp-ba1f3.appspot.com",
+    messagingSenderId: "185725571580",
+    appId: "1:185725571580:web:2bd58f845466bcc4906279",
+    measurementId: "G-1DXB5NHETH"
 };
 
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig); // Removed duplicate initialization
 const db = firebase.firestore();
 
 const Home = () => {
